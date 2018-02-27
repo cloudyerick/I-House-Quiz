@@ -2,6 +2,10 @@ var express = require('express');
 
 var app = express();
 
+//var middleware = require('./middleware.js');
+
+//app.use(middleware.logger);
+
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
@@ -9,4 +13,4 @@ app.get('/', function(req, res) {
 });
 
 
-app.listen(3000);
+app.listen(process.env.PORT);
